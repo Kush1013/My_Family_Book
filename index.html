@@ -1,0 +1,39 @@
+<html><head>
+    <title>My Family Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <div>
+            <h1>My Family Book</h1>
+            <img id="photo" src="Child.jpg">
+            <br>
+            <br>
+            <label id="Name_Display">Kushagra and Hemang Bhardwaj</label>
+             <br>
+            <br>
+            <button id="next_button" onclick="next_member()">Next</button>
+        </div> 
+    </center>
+
+
+<script>
+    var names=["Himanshu Sharma","Chanchal SHarma","Kushagra & Hemang Bhardwaj"];
+    
+    var images=["Father.jpg","mother.png","Child.jpg"];
+    
+    var i=0;
+    function next_member(){
+            document.getElementById("photo").src=images[i];
+            document.getElementById("Name_Display").innerHTML=names[i];
+            i++;
+
+            if(i == 3)
+            {
+                i=0;
+            }
+    }
+
+</script>
+</body></html>
